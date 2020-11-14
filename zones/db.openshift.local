@@ -1,0 +1,23 @@
+$TTL	604800
+@       IN      SOA     openshift.local admin.openshift.local. (
+              3         ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+
+; name servers - NS records
+	IN	NS	ocpdns.openshift.local.
+
+; name servers - A records
+ocpdns.openshift.local.		IN		A		192.168.122.248
+
+
+; 192.168.122.0/24 - A records
+masteroc.openshift.local.	IN		A		192.168.122.126
+node00oc.openshift.local.	IN		A		192.168.122.90
+infra00oc.openshift.local.	IN		A		192.168.122.81
+console.openshift.local.	IN		A		192.168.122.126
+console-int.openshift.local.	IN		A		192.168.122.126
+*.apps.openshift.local.		IN		A		192.168.122.81
+
